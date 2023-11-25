@@ -1,6 +1,6 @@
 import { Server } from "socket.io"
 
-const io = new Server(9000, {
+const io = new Server('https://chatting-app-socket.onrender.com', {
   cors: {
     origin: "https://chatting-app-client2.onrender.com"
   }
