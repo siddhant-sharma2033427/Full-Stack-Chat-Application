@@ -6,6 +6,7 @@ import { uploadFile,getImage } from '../controller/image-controller.js'
 import upload from '../utils/upload.js'
 const route = express.Router();
 
+
 route.post('/add', addUser);
 route.get('/users', getUser);
 
@@ -18,4 +19,6 @@ route.get('/message/get/:id', getMessage);
 //Route for file upload
 route.post('/file/upload', upload.single("file"), uploadFile);
 route.get('/file/:filename',getImage)
+
+
 export default route
