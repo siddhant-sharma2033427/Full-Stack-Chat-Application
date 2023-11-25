@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'http://localhost:8000';
+const url = 'https://chatting-app-i9gw.onrender.com';
 
 export const addUser = async (data)=>{
     try{
