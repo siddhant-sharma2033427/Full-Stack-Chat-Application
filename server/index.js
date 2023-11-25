@@ -8,21 +8,21 @@ import path from 'path'
 app.use(bodyParser.json({extended:true}))
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(cors());
-
+app.use('/',Route);
 // ------------------------Deployment -------------------
-const isProduction = 'production'
-const __dirname1 = path.resolve();
-if(isProduction === 'production'){
-    app.use(express.static(path.join(__dirname1,"../client/build")));
-    app.get('*',(req,res)=>{
-        res.sendFile(path.resolve(__dirname1,"../client","build","index.html"));
-    })
-}else{
-    // app.use('/',Route);
-    app.get('/',(req,res)=>{
-        res.send("working on it");
-    })
-}
+// const isProduction = 'production'
+// const __dirname1 = path.resolve();
+// if(isProduction === 'production'){
+//     app.use(express.static(path.join(__dirname1,"../client/build")));
+//     app.get('*',(req,res)=>{
+//         res.sendFile(path.resolve(__dirname1,"../client","build","index.html"));
+//     })
+// }else{
+    
+//     app.get('/',(req,res)=>{
+//         res.send("working on it");
+//     })
+// }
 
 // ------------------------Deployment -------------------
 Connection();

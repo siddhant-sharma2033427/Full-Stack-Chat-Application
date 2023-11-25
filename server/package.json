@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js",
-    "build":"react-scripts build"
+    "build":"react-scripts --openssl-legacy-provider build"
   },
   "author": "Siddhant Sharma",
   "license": "ISC",
