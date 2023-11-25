@@ -41,10 +41,6 @@ const Footer = ({sendText,setValue,value,file,setFile,setImage}) => {
                 const data = new FormData();
                 data.append("name",file.name);
                 data.append("file",file);
-                console.log(data);
-                console.log(file);
-                console.log(data.id);
-                console.log(file.id)
                 //calling upload file api which is responsible for file upload(image here)
                 let response  = await uploadFile(data);
                 setImage(response.data);//cannot find this one

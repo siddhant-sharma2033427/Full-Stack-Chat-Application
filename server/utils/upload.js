@@ -10,7 +10,7 @@ const DB_PASS = process.env.DB_PASS
 
 const storage = new GridFsStorage({
     url: `mongodb+srv://${DB_USER}:${DB_PASS}@cluster0.feh5uzg.mongodb.net/?retryWrites=true&w=majority`,
-    options: { useNewUrlParser: true },
+    options: { useNewUrlParser: true, useUnifiedTopology:true },
     file: (request, file) => {
         const match = ["image/png", "image/jpg"];
 

@@ -4,7 +4,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import SearchIcon from '@mui/icons-material/Search';
 import {useContext} from 'react'
 // import { defaultProfilePicture } from '../../../constants/data';
-import AccountProvider, { AccountContext } from '../../../context/AccountProvider';
+import  { AccountContext } from '../../../context/AccountProvider';
 const Header = styled(Box)`
 
 height: 44px;
