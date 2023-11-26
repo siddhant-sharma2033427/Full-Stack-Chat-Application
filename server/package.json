@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
+    "start": "concurrently \"npm run start-server\" \"npm run start-socket\"",
+    "start-server":"nodemon index.js",
+    "start-socket":"nodemon ./socket/index.js",
     "build":"npm i --legacy-peer-deps"
   },
   "author": "Siddhant Sharma",

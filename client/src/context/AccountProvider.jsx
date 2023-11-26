@@ -12,7 +12,7 @@ const AccountProvider = ({children})=>{
     const [newmessageflag,setNewmwssageflag ] = useState(false)
     const socket = useRef();
     useEffect(()=>{
-        socket.current = io('https://chatting-app-socket.onrender.com')
+        socket.current = io('https://chatting-app-i9gw.onrender.com')
     },[])
     return(
         <AccountContext.Provider value={{
