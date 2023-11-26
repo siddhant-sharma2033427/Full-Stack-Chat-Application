@@ -43,7 +43,7 @@ const Messages = ({person, consersation}) => {
             setMessages(data);
             
         }
-        consersation._id && getMessagesDetails();
+         getMessagesDetails();
         
 
     },[person._id,consersation._id,newmessageflag])
