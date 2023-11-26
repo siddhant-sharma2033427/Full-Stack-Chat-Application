@@ -22,7 +22,7 @@ const Container = styled(Box)`
 const Messages = ({person, consersation}) => {
     const {account,socket,newmessageflag,setNewmwssageflag} = useContext(AccountContext);
     const [value,setValue ] = useState('');
-    const [Messages,setMessages ] = useState([])
+    const [messages,setMessages ] = useState([])
     
     const [file,setFile] = useState();
     const [image,setImage] = useState('');
@@ -49,7 +49,7 @@ const Messages = ({person, consersation}) => {
     },[person._id,consersation._id,newmessageflag])
     useEffect(() => {
         scrollRef.current?.scrollIntoView({ transition: "smooth" })
-    }, [Messages]);
+    }, [messages]);
     useEffect(() => {
         incomingMessage && consersation?.members?.includes(incomingMessage.senderId) && 
             setMessages((prev) => [...prev, incomingMessage]);
@@ -91,7 +91,7 @@ const Messages = ({person, consersation}) => {
         <Wrapper>
             <Component>
             {
-                Messages && Messages.map(message =>(
+                messages && messages.map(message =>(
                     <Container ref = {scrollRef}>
                         <Message message={message}/>
                     </Container>
