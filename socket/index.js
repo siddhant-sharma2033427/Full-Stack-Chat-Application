@@ -7,7 +7,7 @@ const io = new Server(9000, {
 })
 let users = [];
 const addUser = (userData, socketId) => {
-  console.log("accoutnn peremeter", userData);
+  // console.log("accoutnn peremeter", userData);
   !users.some(user => user.sub === userData.sub) && users.push({ ...userData, socketId });
 }
 const getUser = (userId) => {
