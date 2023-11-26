@@ -38,15 +38,13 @@ const Messages = ({person, consersation}) => {
     },[])
     useEffect(()=>{
         const getMessagesDetails = async ()=>{
-            if(consersation._id){
             let data = await getMessage(consersation._id);
             console.log("selected message messages.jsx",data);
             setMessages(data);
-            }
+            
         }
-        if(consersation._id){
         consersation._id && getMessagesDetails();
-        }
+        
 
     },[person._id,consersation._id,newmessageflag])
     useEffect(() => {

@@ -49,7 +49,7 @@ export const Message = ({ message }) => {
     return (
         <>
             {
-                message && 
+                
                 account.sub === message.senderId ? 
                 <Own>
                     {
@@ -57,7 +57,7 @@ export const Message = ({ message }) => {
                     }
                 </Own>
             :
-            message&&
+            
             <Wrapper>
                 {
                         message.type === 'file' ? <ImageMessage message={message} /> : <TextMessage message={message} />
